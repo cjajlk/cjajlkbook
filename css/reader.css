@@ -1,0 +1,121 @@
+/* 🌙 Salle de lecture — cjajlkbook */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    circle at top,
+    #1b2436 0%,
+    #0f1424 60%,
+    #0b0f1c 100%
+  );
+  color: #e6e9f0;
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.8;
+}
+
+/* Conteneur principal de lecture */
+.reader-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+}
+
+/* Titre du livre */
+.reader-title {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #d6dbf5;
+  letter-spacing: 0.04em;
+}
+
+/* Paragraphes */
+.reader-text p {
+  margin-bottom: 1.6em;
+  font-size: 1.05rem;
+  color: #e2e6f3;
+}
+
+/* Citations ou passages spéciaux (pour plus tard) */
+.reader-text blockquote {
+  margin: 40px 0;
+  padding-left: 20px;
+  border-left: 2px solid rgba(140, 150, 255, 0.4);
+  color: #cfd6ff;
+  font-style: italic;
+}
+
+/* Séparateur doux */
+.reader-separator {
+  width: 60px;
+  height: 1px;
+  margin: 60px auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(180, 190, 255, 0.6),
+    transparent
+  );
+}
+
+/* Bouton retour bibliothèque */
+.reader-back {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: #b8c0ff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.reader-back:hover {
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .reader-container {
+    padding: 60px 20px 100px;
+  }
+
+  .reader-title {
+    font-size: 1.6rem;
+  }
+
+  .reader-text p {
+    font-size: 1rem;
+  }
+}
+.reader-cover {
+  width: 100%;
+  max-width: 520px;
+  margin: 40px auto;
+  display: block;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+#bookCover {
+  text-align: center;
+  margin: 40px 0 60px;
+}
+
+.reader-cover {
+  max-width: 100%;
+  border-radius: 10px;
+  opacity: 0.95;
+}
+.reader-chapter {
+  margin: 80px 0 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #dbe6ff;
+  text-align: center;
+  opacity: 0.9;
+}

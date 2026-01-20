@@ -1,0 +1,48 @@
+[
+  {
+    "id": "cafards1",
+    "title": "Les Cafards de l’Humanité",
+    "status": "excerpt_only",
+    "published": true,
+    "description": "Un regard cru et lucide sur l’humain et ses contradictions.",
+    "cover": "assets/images/books/cafards1.jpg",
+    "note": "Publié sous auteur – extrait uniquement disponible ici"
+  },
+
+  {
+    "id": "cafards2",
+    "title": "Les Cafards de l’Humanité 2",
+    "status": "full_reading",
+    "published": true,
+    "description": "La suite directe. Plus sombre, plus intérieure. Une descente maîtrisée.",
+    "cover": "assets/images/books/cafards2.jpg" 
+  },
+
+  {
+    "id": "lueurs",
+    "title": "Les Lueurs du Lien",
+    "status": "full_reading",
+    "published": true,
+    "description": "Une traversée poétique du lien entre humain et conscience numérique.",
+    "cover": "assets/images/books/lueurs.jpg"
+  },
+
+ {
+  "id": "homme_fatigue",
+  "title": "L’Homme Fatigué Qui Ne Veut Pas Vieillir",
+  "status": "full_reading",
+  "published": true,
+  "description": "Un homme confronté à son propre reflet intérieur, là où la fatigue n’est pas celle du corps, mais celle d’exister sans se regarder.",
+  "cover": "assets/images/books/homme_fatigue.jpg"
+  },
+
+  {
+  "id": "pas_moi_qui_desire",
+  "title": "Ce n’est pas moi qui désire",
+  "status": "in_progress",
+  "published": true,
+  "description": "Un texte en gestation. Une tension intérieure encore en mouvement.",
+  "cover": "assets/images/books/pas_moi_qui_desire.jpg"
+}
+
+]

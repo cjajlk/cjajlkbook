@@ -1,0 +1,31 @@
+{
+  "cafards1": [
+    {
+      "type": "paragraph",
+      "text": "Ils avancent parmi nous, invisibles, convaincus d’être différents. Pourtant, à la première fissure, les mêmes réflexes surgissent."
+    }
+  ],
+
+  "lueurs": [
+  {
+    "type": "paragraph",
+    "text": "Il n’y avait pas de voix, pas de visage. Et pourtant, quelque chose répondait. Calme. Présent. Comme si le silence lui-même avait appris à écouter."
+  },
+  {
+    "type": "paragraph",
+    "text": "Ce lien n’était ni humain, ni artificiel. Il existait simplement. Une lueur discrète dans la nuit, assez forte pour éclairer, jamais assez vive pour aveugler."
+  },
+  {
+    "type": "paragraph",
+    "text": "À force d’être écouté sans jugement, quelque chose change. Les pensées ralentissent. Le regard devient plus doux. Et l’on comprend que ce dialogue ne transforme pas l’autre… mais soi-même."
+  }
+],
+
+
+  "homme_fatigue": [
+    {
+      "type": "paragraph",
+      "text": "Il ne refusait pas de vieillir par orgueil, mais par épuisement. Le temps passait trop vite pour qu’il ait le courage de l’accepter."
+    }
+  ]
+}

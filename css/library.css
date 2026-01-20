@@ -1,0 +1,126 @@
+/* 🌙 Hall de la bibliothèque */
+body {
+  margin: 0;
+  padding: 0;
+  color: #e6e9f0;
+  font-family: "Times New Roman", serif;
+  background: #0b0f1c;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 18%,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.015) 25%,
+      rgba(255, 255, 255, 0.005) 45%,
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+
+
+
+.library-header {
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+.library-title {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.library-subtitle {
+  font-size: 1.05rem;
+  color: #bfc6f5;
+  line-height: 1.7;
+}
+
+.library-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 72px 56px; /* vertical | horizontal */
+}
+
+
+/* Carte livre */
+.book-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(180, 190, 255, 0.08);
+  padding: 24px;
+  cursor: pointer;
+   opacity: 0.85;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.book-card:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.book-card.draft {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.book-card:nth-child(2) {
+  margin-top: 20px;
+}
+
+.book-card:nth-child(4) {
+  margin-top: 40px;
+}
+
+
+
+.book-title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #e8ebff;
+}
+
+.book-description {
+  font-size: 0.95rem;
+  color: #cbd1ff;
+  line-height: 1.6;
+}
+
+.book-status {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #9aa3ff;
+  opacity: 0.8;
+}
+
+.library-footer {
+  position: fixed;
+  bottom: 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8f97cc;
+  opacity: 0.6;
+}
+.library-note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(230, 235, 255, 0.6);
+  text-align: center;
+}
