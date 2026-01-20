@@ -81,21 +81,22 @@ body {
 
 /* Mobile */
 .reader-text p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 19px;
+  line-height: 1.65;
    margin-bottom: 1.2em;
 }
-
 @media (max-width: 768px) {
   .reader-text p {
-    font-size: 1.15rem;
-    line-height: 1.9;
+    font-size: 20px;
   }
+}
+
+
 
   .reader-title {
     font-size: 1.6rem;
   }
-}
+
 .reader-text {
   max-width: 42rem;
   margin: auto;
