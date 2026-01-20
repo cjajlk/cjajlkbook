@@ -80,19 +80,23 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
-  .reader-container {
-    padding: 60px 20px 100px;
+.reader-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .reader-text p {
+    font-size: 1.15rem;
+    line-height: 1.9;
   }
 
   .reader-title {
     font-size: 1.6rem;
   }
-
-  .reader-text p {
-    font-size: 1rem;
-  }
 }
+
+
 .reader-cover {
   width: 100%;
   max-width: 520px;
