@@ -83,6 +83,7 @@ body {
 .reader-text p {
   font-size: 1.05rem;
   line-height: 1.8;
+   margin-bottom: 1.2em;
 }
 
 @media (max-width: 768px) {
@@ -95,6 +96,11 @@ body {
     font-size: 1.6rem;
   }
 }
+.reader-text {
+  max-width: 42rem;
+  margin: auto;
+}
+
 
 
 .reader-cover {
