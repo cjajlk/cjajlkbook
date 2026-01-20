@@ -1,5 +1,9 @@
 /* 🌙 Salle de lecture — cjajlkbook */
 
+/* =========================
+   Base (MOBILE FIRST)
+   ========================= */
+
 body {
   margin: 0;
   padding: 0;
@@ -11,53 +15,60 @@ body {
   );
   color: #e6e9f0;
   font-family: "Georgia", "Times New Roman", serif;
-  line-height: 1.8;
 }
 
-/* Conteneur principal de lecture */
+/* Conteneur */
 .reader-container {
   max-width: 720px;
   margin: 0 auto;
-  padding: 80px 24px 120px;
+  padding: 2.5rem 1.5rem 6rem;
 }
 
 /* Titre du livre */
 .reader-title {
-  font-size: 2rem;
-  font-weight: normal;
+  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 2.5rem;
   color: #d6dbf5;
   letter-spacing: 0.04em;
+  line-height: 1.3;
 }
 
-/* Paragraphes */
+/* Image de couverture */
+#bookCover {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.reader-cover {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 14px;
+  opacity: 0.95;
+}
+
+/* Titre de chapitre */
+.reader-chapter {
+  font-size: 2rem;
+  text-align: center;
+  margin: 4rem 0 2.5rem;
+  color: #dbe6ff;
+  opacity: 0.9;
+}
+
+/* Texte */
 .reader-text p {
-  margin-bottom: 1.6em;
-  font-size: 1.05rem;
+  font-size: 1.7rem;      /* ✅ lisible sans zoom */
+  line-height: 1.9;
+  margin-bottom: 2rem;
   color: #e2e6f3;
 }
 
-.reader-text h2 {
-  font-size: 1.5rem;
-  margin: 48px 0 24px;
-}
-
-
-/* Citations ou passages spéciaux (pour plus tard) */
-.reader-text blockquote {
-  margin: 40px 0;
-  padding-left: 20px;
-  border-left: 2px solid rgba(140, 150, 255, 0.4);
-  color: #cfd6ff;
-  font-style: italic;
-}
-
-/* Séparateur doux */
+/* Séparateur */
 .reader-separator {
   width: 60px;
   height: 1px;
-  margin: 60px auto;
+  margin: 4rem auto;
   background: linear-gradient(
     to right,
     transparent,
@@ -66,92 +77,45 @@ body {
   );
 }
 
-/* Bouton retour bibliothèque */
+/* Bouton retour */
 .reader-back {
   position: fixed;
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #b8c0ff;
   background: transparent;
   border: none;
   cursor: pointer;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .reader-back:hover {
   opacity: 1;
 }
 
-.reader-cover {
-  width: 100%;
-  max-width: 520px;
-  margin: 40px auto;
-  display: block;
-  border-radius: 6px;
-  opacity: 0.9;
-}
-#bookCover {
-  text-align: center;
-  margin: 40px 0 60px;
-}
+/* =========================
+   DESKTOP (on affine)
+   ========================= */
 
-.reader-cover {
-  max-width: 100%;
-  border-radius: 10px;
-  opacity: 0.95;
-}
-.reader-chapter {
-  margin: 80px 0 30px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #dbe6ff;
-  text-align: center;
-  opacity: 0.9;
-}
-
-/* 📱 Lecture mobile — priorité confort */
-@media (max-width: 768px) {
-
-  .reader-container {
-    padding: 56px 20px 120px;
-  }
+@media (min-width: 769px) {
 
   .reader-title {
-    font-size: 1.9rem;
-    margin-bottom: 48px;
-    line-height: 1.3;
+    font-size: 1.8rem;
   }
 
-  .reader-text {
-    max-width: 100%;
+  .reader-chapter {
+    font-size: 1.5rem;
   }
 
   .reader-text p {
-  font-size: 1.3rem;
-  line-height: 2;
-  margin-bottom: 1.6em;
-}
-
-
-
-  .reader-chapter {
-    font-size: 1.6rem;
-    margin: 70px 0 36px;
+    font-size: 1.2rem;
+    line-height: 1.85;
   }
 
-  .reader-cover {
-    max-width: 100%;
-    margin: 32px auto 48px;
-    border-radius: 12px;
-  }
-
-}
-
-@media (max-width: 768px) {
   .reader-container {
-    padding: 72px 24px 120px;
+    padding: 5rem 2rem 8rem;
   }
+
 }
