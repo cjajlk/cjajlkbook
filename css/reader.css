@@ -38,6 +38,12 @@ body {
   color: #e2e6f3;
 }
 
+.reader-text h2 {
+  font-size: 1.5rem;
+  margin: 48px 0 24px;
+}
+
+
 /* Citations ou passages spéciaux (pour plus tard) */
 .reader-text blockquote {
   margin: 40px 0;
@@ -124,11 +130,11 @@ body {
   }
 
   .reader-text p {
-  font-size: 1.15rem;
-  line-height: 1.9;
-  margin-bottom: 1.4em;
-  color: #e6e9f0;
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 1.6em;
 }
+
 
 
   .reader-chapter {
@@ -142,4 +148,10 @@ body {
     border-radius: 12px;
   }
 
+}
+
+@media (max-width: 768px) {
+  .reader-container {
+    padding: 72px 24px 120px;
+  }
 }
