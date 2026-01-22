@@ -1,5 +1,14 @@
 // 🌙 cjajlkbook — Hall de la bibliothèque
 
+// 🔓 Déblocage après retour Ko-fi
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("unlock") === "library") {
+  localStorage.setItem("libraryUnlocked", "true");
+
+  // Nettoyage de l’URL (optionnel mais élégant)
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch("data/books.json")
@@ -122,11 +131,17 @@ function displayBooks(books) {
 
   if (book.status !== "full_reading") return;
 
+  function isLibraryUnlocked() {
+  return localStorage.getItem("libraryUnlocked") === "true";
+}
+
+
   // Si déjà débloqué → lecture directe
-  if (isReadingUnlocked(book.id)) {
-    window.location.href = `reader.html?book=${book.id}`;
-    return;
-  }
+ if (isLibraryUnlocked() || isReadingUnlocked(book.id)) {
+  window.location.href = `reader.html?book=${book.id}`;
+  return;
+}
+
 
   // Supprimer une carte existante sous ce livre
   const existing = card.querySelector(".unlock-card");

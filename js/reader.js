@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const isUnlocked = localStorage.getItem("libraryUnlocked") === "true";
+
+if (!isUnlocked) {
+  window.location.href = "index.html";
+}
+
   const params = new URLSearchParams(window.location.search);
   const bookId = params.get("book");
 
