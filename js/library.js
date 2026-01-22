@@ -153,27 +153,25 @@ function displayBooks(books) {
     La lecture reste ici, présente, non téléchargeable, non copiable.
   </em></p>
 
-  <a
-    href="https://ko-fi.com/cjajlk?utm_source=cjajlkbook&unlock=library"
-    target="_blank"
-    rel="noopener"
-    class="kofi-link"
-  >
-    Accéder à la lecture via Ko-fi
-  </a>
+  <button class="kofi-link">
+  Accéder à la lecture via Ko-fi
+</button>
+
 `;
+  const kofiButton = unlockCard.querySelector(".kofi-link");
+
+kofiButton.addEventListener("click", (e) => {
+  e.stopPropagation(); // empêche le clic de remonter à la carte
+  window.open(
+    "https://ko-fi.com/cjajlk?utm_source=cjajlkbook&unlock=library",
+    "_blank",
+    "noopener,noreferrer"
+  );
+});
 
 
   card.appendChild(unlockCard);
-
-const kofiLink = unlockCard.querySelector(".kofi-link");
-kofiLink.addEventListener("click", (e) => {
-  e.stopPropagation();
 });
-});
-
-
-
 
     container.appendChild(card);
   });
