@@ -1,15 +1,5 @@
 // 🌙 cjajlkbook — Hall de la bibliothèque
 
-// 🔓 Déblocage après retour Ko-fi
-const params = new URLSearchParams(window.location.search);
-
-if (params.get("unlock") === "library") {
-  localStorage.setItem("libraryUnlocked", "true");
-
-  // Nettoyage de l’URL (optionnel mais élégant)
-  window.history.replaceState({}, document.title, window.location.pathname);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   fetch("data/books.json")
     .then(response => response.json())
@@ -21,17 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function isLibraryUnlocked() {
-  return localStorage.getItem("cjajlk_library_unlocked") === "true";
-}
 
 
-function isReadingUnlocked(bookId) {
-  return (
-    localStorage.getItem("unlock_all_books") === "true" ||
-    localStorage.getItem(`unlock_book_${bookId}`) === "true"
-  );
-}
 
 function isReadingUnlocked() {
   return localStorage.getItem("cjajlk_library_unlocked") === "true";
@@ -128,19 +109,16 @@ function displayBooks(books) {
 
   e.preventDefault();
 
-
-  if (book.status !== "full_reading") return;
-
-  function isLibraryUnlocked() {
-  return localStorage.getItem("libraryUnlocked") === "true";
-}
-
-
-  // Si déjà débloqué → lecture directe
- if (isLibraryUnlocked() || isReadingUnlocked(book.id)) {
+  // 🔓 Si la bibliothèque est déjà débloquée → lecture directe
+if (isReadingUnlocked()) {
   window.location.href = `reader.html?book=${book.id}`;
   return;
 }
+
+
+
+  if (book.status !== "full_reading") return;
+
 
 
   // Supprimer une carte existante sous ce livre

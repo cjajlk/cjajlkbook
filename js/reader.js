@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const isUnlocked = localStorage.getItem("libraryUnlocked") === "true";
+ const isUnlocked = localStorage.getItem("cjajlk_library_unlocked") === "true";
 
 if (!isUnlocked) {
   window.location.href = "index.html";
