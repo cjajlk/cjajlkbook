@@ -151,6 +151,9 @@ if (isReadingUnlocked()) {
 </button>
 
 `;
+
+
+
   const kofiButton = unlockCard.querySelector(".kofi-link");
 
 kofiButton.addEventListener("click", (e) => {

@@ -42,6 +42,12 @@ book.chapters.forEach(chapter => {
   });
 });
 
+const reminder = document.createElement("div");
+reminder.className = "reading-reminder";
+reminder.textContent = "Lecture sur place uniquement — merci de respecter ce lieu.";
+
+content.appendChild(reminder);
+
 
 
       

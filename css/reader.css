@@ -119,4 +119,12 @@ body {
   }
 
 }
+.reading-reminder {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  font-style: italic;
+}
+
 
