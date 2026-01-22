@@ -1,5 +1,6 @@
 // 🌙 cjajlkbook — Hall de la bibliothèque
 
+
 document.addEventListener("DOMContentLoaded", () => {
   fetch("data/books.json")
     .then(response => response.json())
@@ -15,6 +16,7 @@ function displayBooks(books) {
   const container = document.getElementById("libraryContainer");
 
   books.forEach(book => {
+   
     if (!book.published) return;
 
     const card = document.createElement("div");
@@ -27,6 +29,27 @@ function displayBooks(books) {
     const description = document.createElement("p");
     description.className = "book-description";
     description.textContent = book.description;
+
+
+    if (book.readingTime || book.pages) {
+  const meta = document.createElement("div");
+  meta.className = "book-meta";
+
+  if (book.readingTime) {
+    const time = document.createElement("span");
+    time.textContent = `⏳ ${book.readingTime}`;
+    meta.appendChild(time);
+  }
+
+  if (book.pages) {
+    const pages = document.createElement("span");
+    pages.textContent = `📖 ${book.pages}`;
+    meta.appendChild(pages);
+  }
+
+  card.appendChild(meta);
+}
+
 
     const status = document.createElement("div");
     status.className = "book-status";
