@@ -159,3 +159,44 @@ body::before {
   align-items: center;
   gap: 4px;
 }
+.unlock-card {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  background: rgba(20, 20, 30, 0.6);
+  color: #eaeaf0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.unlock-card p {
+  margin-bottom: 0.8rem;
+}
+
+.unlock-card .kofi-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  background: #ff5f5f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.unlock-card .kofi-link:hover {
+  opacity: 0.9;
+}
+
+.unlock-confirmation {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.8rem 1rem;
+  background: rgba(30, 40, 60, 0.85);
+  color: #eef;
+  text-align: center;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
