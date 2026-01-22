@@ -110,8 +110,15 @@ function displayBooks(books) {
     card.appendChild(status);
 
     // Interaction douce (plus tard : ouvrir extrait ou lecture)
-   card.addEventListener("click", (e) => {
+  card.addEventListener("click", (e) => {
+
+  // ✅ Si on clique sur le bouton Ko-fi, on laisse faire
+  if (e.target.closest(".kofi-link")) {
+    return;
+  }
+
   e.preventDefault();
+
 
   if (book.status !== "full_reading") return;
 
@@ -158,7 +165,13 @@ function displayBooks(books) {
 
 
   card.appendChild(unlockCard);
+
+const kofiLink = unlockCard.querySelector(".kofi-link");
+kofiLink.addEventListener("click", (e) => {
+  e.stopPropagation();
 });
+});
+
 
 
 
